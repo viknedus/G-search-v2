@@ -6,17 +6,22 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+_Learn More?_
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Using Tailwind.css
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Tailwind is a utility first CSS framework that simplifies css to build any design, directly in your markup. More about Tailwind CSS [Here](https://tailwindcss.com). Config with Next.js app, [Here](https://tailwindcss.com/docs/guides/nextjs).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Heroicons
+
+Heroicons is used instead of Material icons because it works natively with tailwind CSS.
+
+# Designing
+
+When using Tailwind CSS i have to design the app using a 'mobile-first' design principle. This means, i design for mobile first then use breakpoints to scale up on larger screens. (eg of breakpoints in tailwind; sm - small, md - medium, lg - large, lxl - extra large, 2xl & 3xl etc.)
+
+## Using server side rendering for the search results
+
+I will use JSON to capture searched results then use captured results to generate dummy data to be rendered on the server side of my search result page. This is to not exceed 100 search quota/day set by Google search API
