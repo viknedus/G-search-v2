@@ -47,6 +47,7 @@ export default function Home() {
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
           height={100}
           width={300}
+          alt="G Search"
         />
 
         <div className="flex w-full mt-5 hover:shadow-lg focus-within:shadow-lg max-w-md border border-gray-200 rounded-full px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">
@@ -64,7 +65,7 @@ export default function Home() {
             Google Search
           </button>
           <button className="btn" onClick={search}>
-            I'm Feeling Lucky
+            Im Feeling Lucky
           </button>
         </div>
       </form>

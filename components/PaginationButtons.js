@@ -10,6 +10,7 @@ export default function PaginationButtons() {
       {startIndex >= 10 && (
         <Link
           href={`/search?term=${router.query.term}&start=${startIndex - 10}`}
+          passHref
         >
           <div className="chev">
             <ChevronLeftIcon className="h-5" />
@@ -18,7 +19,10 @@ export default function PaginationButtons() {
         </Link>
       )}
 
-      <Link href={`/search?term=${router.query.term}&start=${startIndex + 10}`}>
+      <Link
+        href={`/search?term=${router.query.term}&start=${startIndex + 10}`}
+        passHref
+      >
         <div className="chev">
           <ChevronRightIcon className="h-5" />
           <p>Next</p>

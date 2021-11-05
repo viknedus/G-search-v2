@@ -45,6 +45,7 @@ export default function Search({ results }) {
             width={120}
             onClick={() => router.push("/")}
             className="cursor-pointer"
+            alt="Home"
           />
           <form className="flex border items-center flex-grow px-6 py-3 ml-10 mr-5 border-gray-50 rounded-full shadow-md max-w-3xl">
             <input
