@@ -13,6 +13,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useRef } from "react";
 import Avatar from "../components/Avatar";
+import Footer from "../components/Footer";
 import HeaderOption from "../components/HeaderOption";
 import SearchResults from "../components/SearchResults";
 import { API_KEY, CONTEXT_KEY } from "../keys";
@@ -45,17 +46,17 @@ export default function Search({ results }) {
             onClick={() => router.push("/")}
             className="cursor-pointer"
           />
-          <form className="flex border items-center flex-grow px-6 py-3 ml-10 mr-5 border-gray-200 rounded-full shadow-lg max-w-3xl">
+          <form className="flex border items-center flex-grow px-6 py-3 ml-10 mr-5 border-gray-50 rounded-full shadow-md max-w-3xl">
             <input
               ref={searchInputRef}
               type="text"
               className="flex-grow w-full focus:outline-none"
             />
             <XIcon
-              className="h-4 text-gray-400 cursor-pointer transition duration-100 transform hover:scale-125 sm:mr-3"
+              className="h-6 text-gray-400 cursor-pointer transition duration-100 transform hover:scale-125 sm:mr-3"
               onClick={() => (searchInputRef.current.value = "")}
             />
-            <MicrophoneIcon className="h-4 text-blue-400 cursor-pointer hidden sm:inline-flex border-l-2 pl-3 border-gray-300" />
+            <MicrophoneIcon className="h-6 text-blue-400 cursor-pointer hidden sm:inline-flex border-l-2 pl-3 border-gray-300" />
             <SearchIcon className="h-6 text-blue-400 cursor-pointer hidden sm:inline-flex pl-3" />
             <button hidden type="submit" onClick={search}>
               Search
@@ -79,12 +80,13 @@ export default function Search({ results }) {
         </div>
       </header>
       <SearchResults results={results} />
+      <Footer />
     </div>
   );
 }
 
 export async function getServerSideProps(context) {
-  const useDummyData = true;
+  const useDummyData = false;
   const startIndex = context.query.start || 0;
 
   const data = useDummyData
