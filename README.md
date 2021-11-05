@@ -1,6 +1,6 @@
 # Google search v2-ish
 
-Using serverside rendering and Google API to fetch data here is the result so far;
+A responsive search engine using serverside rendering and Google API to fetch data here is the result so far
 
 ![G search v2](/public/ScreenRecording.gif)
 
