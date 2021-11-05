@@ -1,6 +1,6 @@
-# Google search v2-ish
+# G Search v2
 
-A responsive search engine using serverside rendering and Google API to fetch data here is the result so far
+A responsive search engine using serverside rendering and Google API to fetch data. It is mimicking Google Search.
 
 ![G search v2](/public/ScreenRecording.gif)
 
