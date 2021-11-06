@@ -52,6 +52,7 @@ export default function Search({ results }) {
               ref={searchInputRef}
               type="text"
               className="flex-grow w-full focus:outline-none"
+              defaultValue={router.query.term}
             />
             <XIcon
               className="h-6 text-gray-400 cursor-pointer transition duration-100 transform hover:scale-125 sm:mr-3"
