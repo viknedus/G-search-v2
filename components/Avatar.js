@@ -8,7 +8,7 @@ function Avatar({ className }) {
       loading="lazy"
       src="https://avatars.githubusercontent.com/u/16660623?v=4"
       alt="profile pic"
-      onClick={() => router.push("https://github.com/viknedus")}
+      onClick={() => router.push("https://github.com/viknedus/g-search-v2")}
     />
   );
 }

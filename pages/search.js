@@ -18,6 +18,7 @@ import HeaderOption from "../components/HeaderOption";
 import SearchResults from "../components/SearchResults";
 import { API_KEY, CONTEXT_KEY } from "../keys";
 import Response from "../Response";
+import logo from "../public/Google_2015_logo.svg";
 
 export default function Search({ results }) {
   //   console.log(results);
@@ -40,7 +41,7 @@ export default function Search({ results }) {
       <header className="sticky top-0 bg-white">
         <div className="flex w-full p-6 items-center">
           <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+            src={logo}
             height={40}
             width={120}
             onClick={() => router.push("/")}

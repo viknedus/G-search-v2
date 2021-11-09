@@ -9,6 +9,7 @@ import {
 import Footer from "../components/Footer";
 import { useRef } from "react";
 import { useRouter } from "next/router";
+import logo from "../public/Google_2015_logo.svg";
 
 export default function Home() {
   const router = useRouter();
@@ -43,12 +44,7 @@ export default function Home() {
       </header>
 
       <form className="flex flex-col items-center mt-44 flex-grow w-4/5">
-        <Image
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
-          height={100}
-          width={300}
-          alt="G Search"
-        />
+        <Image src={logo} height={100} width={300} alt="G Search" />
 
         <div className="flex w-full mt-5 hover:shadow-lg focus-within:shadow-lg max-w-md border border-gray-200 rounded-full px-5 py-3 items-center sm:max-w-xl lg:max-w-2xl">
           <SearchIcon className="h-5 text-gray-400 mr-2" />
@@ -56,6 +52,7 @@ export default function Home() {
             ref={searchInputRef}
             type="text"
             className="focus:outline-none flex-grow"
+            defaultValue={router.query.term}
           />
           <MicrophoneIcon className="h-5 text-gray-400" />
         </div>
